@@ -26,7 +26,6 @@ const getCategory = async () => {
       const categoryOption = document.createElement("OPTION");
       categoryOption.innerHTML = quizCategory[value].name;
       categoryOption.value = quizCategory[value].id;
-      console.log(categoryOption.value);
       categoryList.append(categoryOption);
     }
   };
@@ -50,9 +49,8 @@ const getQuiz = async (number, category, difficulty, type) => {
   const response = await axios.get(
     `https://opentdb.com/api.php?amount=${number}&category=${category}&difficulty=${difficulty}&type=${type}`
   );
-  console.log(response);
+
   quiz = response.data;
-  console.log(quiz.results);
   displayQuestion();
 };
 
@@ -98,7 +96,6 @@ function displayQuestion() {
 
     answerButton.addEventListener("click", () => {
       selectedAnswer = allChoice[choice];
-      console.log("Selected Answer:", selectedAnswer);
 
       // Remove highlight for every button then add to another one
       const allButton = document.querySelectorAll(".choiceButton");

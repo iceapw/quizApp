@@ -1,0 +1,226 @@
+.body{
+    margin-top: 50px;
+}
+
+.formContainer {
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 25vh;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.quizContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 20vh;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quizContainer h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.choicesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.choiceButton {
+    background-color: #00b4d8;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.choiceButton:hover {
+    background-color: #0096c7;
+    transform: translateY(-3px);
+}
+
+.selected {
+    background-color: #ff758f;
+}
+
+
+.submitButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submitButton:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+select, input {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.formContainer select,
+.formContainer input {
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+.formContainer .quizForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer button {
+    background-color: #00b4d8;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.formContainer button:hover {
+    background-color: #0096c7;
+    transform: translateY(-2px);
+}
+
+/* Styling the reset button */
+button[type="button"] {
+    background-color: #ff758f;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #ff4d6b;
+}
+
+@media (max-width: 600px) {
+    .formContainer, .quizContainer {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .choiceButton {
+        font-size: 14px;
+    }
+
+    .submitButton {
+        padding: 12px;
+    }
+
+    select, input {
+        padding: 10px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+
+.questionInfo {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.infoTag {
+    background: #e0e0e0;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.infoTag:nth-child(1) { background: #90caf9; }
+.infoTag:nth-child(2) { background: #a5d6a7; } 
+
+
+.resultMessage {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.correct {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+.incorrect {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.result-icon {
+    font-size: 24px;
+}
+
+.result-text p {
+    margin: 5px 0;
+}
+
+.correct-answer {
+    background-color: #4CAF50 !important;
+    color: white;
+}
+
+.choiceButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+
+    <!-- Form for input to get quizzes -->
+    <div class="formContainer ">
+        <h1>Trivia App</h1>
+        <form class="quizForm hide">
+            <!-- Input for number of quiz -->
+            <input type="number" placeholder="Number of Questions" name="number" required max="20">
+
+            <!-- Category select -->
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="">Any</option>
+            </select>
+
+            <!-- Difficulty Select -->
+            <label for="difficulty">Difficulty</label>
+            <select name="difficulty" id="difficulty">
+                <option value="" >Any</option>
+                <option value="easy" >Easy</option>
+                <option value="medium" >Medium</option>
+                <option value="hard" >Hard</option>
+            </select>
+
+            <!-- Type Select -->
+            <label for="type">type</label>
+            <select name="type" id="type">
+                <option value="" >Any</option>
+                <option value="multiple" >Multiple Choice</option>
+                <option value="boolean">True / False</option>
+            </select>
+            
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
+
+
+
+    <!-- Show quiz and choices -->
+    <div class="quizContainer" style="display: none;">
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
